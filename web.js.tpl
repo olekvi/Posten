@@ -2,7 +2,8 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-	response.send('Hello.  Please give me a Norwegian postal code (postnummer) and I will give you the postal place');
+        response.send('Hello.  Please give me a Norwegian postal ' +
+                      'code (postnummer) and I will give you the place');
 });
 
 app.get('/:pc', function(request, response) {
